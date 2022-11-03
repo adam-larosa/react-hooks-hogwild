@@ -1,11 +1,20 @@
 import React from "react";
 import piggy from "../assets/porco.png";
 
-const Nav = () => {
+const Nav = ({ toggleFilter, toggleSort }) => {
 	return (
 		<div className="navWrapper">
+
+			<select onChange={ e => toggleSort( e.target.value ) }>
+				<option></option>
+				<option value='name'>Name</option>
+				<option value='weight'>Weight</option>
+			</select>
+
 			<span className="headerText">HogWild</span>
-			<div className="TwirlyPig">
+
+			<div onClick={ toggleFilter }className="TwirlyPig">
+
 				<img src={piggy} className="App-logo" alt="piggy" />
 			</div>
 			<span className="normalText">
