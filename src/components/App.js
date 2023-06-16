@@ -43,7 +43,7 @@ function App() {
 	}
 	
 	/* the callback we're giving to sort NEEDS to return a positive or 
-	   negitive number so sort will know which one goes first */
+	   negative number so sort will know which one goes first */
 	const sortedHogs = [ ...filteredHogs ].sort( byNameOrWeight )
 
 
